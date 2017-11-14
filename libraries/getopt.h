@@ -18,3 +18,19 @@ and an implementation expressed in a .c file
 #endif
 
 /* END OF FILE */
+
+/*
+
+As a general rule, headers contain anything that should be exported, or "seen" by the other modules in a program.
+This include macro definitions:
+	-structure,
+	-union,
+	-enumeration declarations,
+	-external function declarations
+	-global variable declarations
+
+The #ifndef GETOPT_H/#define GETOPT_H trick is colloquially called include guards.
+This is used so that if the getopt.h file were included more than once in a translation unit,
+the unit would only see the contents once.
+
+*/
